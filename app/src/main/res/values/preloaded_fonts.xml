@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/anta</item>
+        <item>@font/anton</item>
+        <item>@font/antonio_thin</item>
+    </array>
+</resources>

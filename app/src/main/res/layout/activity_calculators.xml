@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFF6F6"
+            android:text="Back"
+            android:textColor="#3EC25B"/>
+
+        <!-- BMI Calculator Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="BMI Calculator"
+            android:textSize="20sp"
+            android:textColor="#111827"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Height (cm)"/>
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Weight (kg)"/>
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/btnCalculateBmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#3EC25B"
+                android:text="Calculate BMI"
+                android:textColor="#FFFFFF"/>
+
+            <!-- BMI Result Area -->
+            <TextView
+                android:id="@+id/tvBmiResult"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="#F5F5F5"
+                android:padding="16dp"/>
+        </LinearLayout>
+
+        <!-- Calorie Calculator Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Daily Calorie Calculator"
+            android:textSize="20sp"
+            android:textColor="#111827"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age (years)"/>
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Gender"/>
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Male"/>
+
+                <RadioButton
+                    android:id="@+id/rbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"/>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Weight (kg)"/>
+
+            <EditText
+                android:id="@+id/etCalorieWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Height (cm)"/>
+
+            <EditText
+                android:id="@+id/etCalorieHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"/>
+
+            <Button
+                android:id="@+id/btnCalculateCalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#3EC25B"
+                android:text="Calculate Daily Calories"
+                android:textColor="#FFFFFF"/>
+
+            <!-- Calorie Result Area -->
+            <TextView
+                android:id="@+id/tvCalorieResult"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="#F5F5F5"
+                android:padding="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
