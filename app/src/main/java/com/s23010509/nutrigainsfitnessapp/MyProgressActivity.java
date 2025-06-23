@@ -13,7 +13,7 @@ public class MyProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myprogress);
 
-        // Back button click listener
+        // Back button
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(MyProgressActivity.this, HomeActivity.class);
@@ -22,6 +22,5 @@ public class MyProgressActivity extends AppCompatActivity {
             finish();
         });
 
-        // ... rest of your progress tracking code
     }
 }

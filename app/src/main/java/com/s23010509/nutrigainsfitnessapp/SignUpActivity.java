@@ -11,13 +11,13 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup_activity);
 
-        // Register to CreateProfile
+        // Register button to CreateProfile page
         findViewById(R.id.btnRegister).setOnClickListener(v -> {
             startActivity(new Intent(this, CreateProfileActivity.class));
             finish(); // Remove signup screen from back stack
         });
 
-        // Login to LoginActivity
+        // Login button to LoginActivity page
         findViewById(R.id.btnlogin).setOnClickListener(v -> {
             startActivity(new Intent(this, LoginActivity.class));
         });

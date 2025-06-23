@@ -29,32 +29,27 @@
         </activity>
 
 
-        <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
 
 
 
-        <!-- Sign Up Activity -->
         <activity
             android:name=".SignUpActivity"
             android:exported="false" />
 
 
-
-        <!-- Home Activity (Main App) -->
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
 
 
-
-        <!-- Create Profile Activity -->
         <activity
             android:name=".CreateProfileActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
 
         <activity android:name=".CalculatorsActivity" />
         <activity android:name=".RemindersActivity" />

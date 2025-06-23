@@ -22,7 +22,6 @@ public class CreateProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
 
-        // Initialize DatabaseHelper
         dbHelper = new DataBaseHelper(this);
 
         // Initialize views
@@ -36,7 +35,6 @@ public class CreateProfileActivity extends AppCompatActivity {
         cbBuildMuscles = findViewById(R.id.checkBox2);
         cbFatLoss = findViewById(R.id.checkBox3);
 
-        // Set click listener for Create button
         Button btnCreate = findViewById(R.id.btnlogin);
         btnCreate.setOnClickListener(v -> saveProfileData());
     }
@@ -48,7 +46,6 @@ public class CreateProfileActivity extends AppCompatActivity {
         String height = etHeight.getText().toString().trim();
         String weight = etWeight.getText().toString().trim();
 
-        // Handle gender selection (without RadioGroup)
         String gender = "";
         if (rbMale.isChecked()) {
             gender = "Male";
@@ -56,18 +53,17 @@ public class CreateProfileActivity extends AppCompatActivity {
             gender = "Female";
         }
 
-        // Handle goal selections
         StringBuilder goals = new StringBuilder();
         if (cbWeightGain.isChecked()) goals.append("Weight Gain,");
         if (cbBuildMuscles.isChecked()) goals.append("Build Muscles,");
         if (cbFatLoss.isChecked()) goals.append("Fat Loss,");
         String goal = goals.length() > 0 ? goals.substring(0, goals.length()-1) : "";
 
-        // Insert into database
         boolean isInserted = dbHelper.insertProfileData(name, age, gender, height, weight, goal);
 
         if (isInserted) {
             Toast.makeText(this, "Profile saved!", Toast.LENGTH_SHORT).show();
+
             //Navigate to HomeActivity
             Intent intent = (new Intent(CreateProfileActivity.this, HomeActivity.class));
             startActivity(intent);

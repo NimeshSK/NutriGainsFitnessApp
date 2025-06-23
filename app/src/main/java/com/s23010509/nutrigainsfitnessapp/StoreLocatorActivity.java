@@ -41,7 +41,6 @@ public class StoreLocatorActivity extends AppCompatActivity implements OnMapRead
         btnSearch.setOnClickListener(v -> editSearch());
 
 
-        // Back button click listener
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(StoreLocatorActivity.this, HomeActivity.class);

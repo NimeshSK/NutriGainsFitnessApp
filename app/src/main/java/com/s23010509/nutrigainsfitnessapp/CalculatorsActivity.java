@@ -21,10 +21,9 @@ public class CalculatorsActivity extends AppCompatActivity {
         // Back button click listener
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
-            // Create intent to go back to HomeActivity
+            // Go back to HomeActivity
             Intent intent = new Intent(CalculatorsActivity.this, HomeActivity.class);
 
-            // Clear back stack so user can't return to calculator with back button
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
 
             startActivity(intent);
@@ -47,7 +46,7 @@ public class CalculatorsActivity extends AppCompatActivity {
                 double height = Double.parseDouble(etHeight.getText().toString());
                 double weight = Double.parseDouble(etWeight.getText().toString());
 
-                // BMI formula: weight (kg) / (height (m))²
+                // BMI formula
                 double bmi = weight / Math.pow(height / 100, 2);
                 String interpretation = interpretBmi(bmi);
 
@@ -59,7 +58,6 @@ public class CalculatorsActivity extends AppCompatActivity {
         });
     }
 
-    // Add this helper method to interpret BMI values
     private String interpretBmi(double bmi) {
         if (bmi < 18.5) {
             return "Underweight";
@@ -87,7 +85,6 @@ public class CalculatorsActivity extends AppCompatActivity {
                 double height = Double.parseDouble(etHeight.getText().toString());
                 boolean isMale = rgGender.getCheckedRadioButtonId() == R.id.rbMale;
 
-                // Harris-Benedict equation for BMR (Maintenance Calories)
                 double maintenanceCalories;
                 if (isMale) {
                     maintenanceCalories = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
@@ -95,7 +92,6 @@ public class CalculatorsActivity extends AppCompatActivity {
                     maintenanceCalories = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
                 }
 
-                // Simple clean output format
                 String result = String.format(Locale.getDefault(),
                         "Daily Calorie Needs:\n\n" +
                                 "Maintenance: %.0f kcal",

@@ -54,16 +54,16 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL_7, goal);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
-        return result != -1; // Returns true if inserted successfully
+        return result != -1;
     }
 
-    // Get all profiles (optional - for future use)
+    // Get all profiles (not used for now)
     public Cursor getAllProfiles() {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 
-    // Update profile (optional - for future use)
+    // Update profile (not used for now)
     public boolean updateProfile(String id, String name, String age, String gender,
                                  String height, String weight, String goal) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -80,7 +80,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return result > 0;
     }
 
-    // Delete profile (optional - for future use)
+    // Delete profile (for future use)
     public Integer deleteProfile(String id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "ID = ?", new String[]{id});

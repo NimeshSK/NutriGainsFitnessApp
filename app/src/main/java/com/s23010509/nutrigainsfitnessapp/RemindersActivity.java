@@ -13,7 +13,7 @@ public class RemindersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminders);
 
-        // Back button click listener
+        // Back button
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             Intent intent = new Intent(RemindersActivity.this, HomeActivity.class);
@@ -22,6 +22,5 @@ public class RemindersActivity extends AppCompatActivity {
             finish();
         });
 
-        // ... rest of your reminders code
     }
 }

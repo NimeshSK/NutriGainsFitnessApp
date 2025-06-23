@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- 1. Simplified Welcome Message -->
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="match_parent"
@@ -21,7 +20,7 @@
             android:textColor="#111827"
             android:layout_marginBottom="16dp"/>
 
-        <!-- 2. Step Counter Card -->
+        <!-- Step Counter Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +59,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- 3. Quick Access Buttons -->
+        <!-- Quick Access Buttons -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,10 +90,9 @@
                     android:id="@+id/btnCalculators">
 
                     <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/mainlogo"
-                        app:tint="#5FA8A4"/>
+                        android:layout_width="49dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/calculatoricon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -127,8 +125,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/mainlogo"
-                        app:tint="#5FA8A4"/>
+                        android:src="@drawable/remindericon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -161,8 +158,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/mainlogo"
-                        app:tint="#5FA8A4"/>
+                        android:src="@drawable/locationicon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -195,8 +191,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/mainlogo"
-                        app:tint="#5FA8A4"/>
+                        android:src="@drawable/progressicon" />
 
                     <TextView
                         android:layout_width="wrap_content"
